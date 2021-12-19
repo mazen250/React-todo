@@ -1,38 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    min-width: 100%;
+    min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todoHeader h1 {
+    color: aliceblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todoCards {
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todoHeader {
+    min-width: 90vw;
+    background-color: rgb(58, 58, 58);
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 10px;
+    border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.inputBtn {
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputBtn input {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    overflow-y: scroll;
+    font-weight: 400;
+    padding-left: 30px;
+    border-radius: 3px;
+    border: black 1px solid;
+    margin-right: 5px;
+}
+
+.inputBtn input:focus {
+    border-color: #ff4444;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+}
+
+.inputBtn button {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: solid black 1px;
+    background-color: rgb(255, 254, 254);
+    font-weight: 500;
+}
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.todoItem {
+    width: 400px;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.todoCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+#root>div>div>div.todoHeader>h2 {
+    font-size: 35px;
+    width: 100%;
+}
+
+#root>div>div>div.todoCards>div>h2 {
+    font-size: 20px;
+}
+
+#root>div>div {
+    width: 100%;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(58, 58, 58);
+    color: aliceblue;
+    height: 5vh;
+    margin-top: 20px;
+    display: grid;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 20px;
+    top: 100%;
+    position: sticky;
+}
+
+.deleteBtn {
+    border: 1px solid black;
+    background-color: black;
+    color: aliceblue;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todobtn {
+    border: 1px solid black;
+    background-color: black;
+    color: aliceblue;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.todobtn:hover {
+    transform: scale(1.1);
 }
