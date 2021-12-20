@@ -1,7 +1,7 @@
 import React from "react";
 
 function Footer() {
-  const [name, setName] = React.useState("Mazen Fayez");
+  const [name, setName] = React.useState("Mazen-Hania-salman");
 
   return (
     <div className="footer">
