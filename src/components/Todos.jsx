@@ -11,15 +11,15 @@ function Todos() {
   const [sortedDataDS, setSortedDataDS] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5001/todos").then((res) => {
+    axios.get("http://localhost:5000/todos").then((res) => {
       setTodos(res.data);
     });
-    axios.get("http://localhost:5001/todosAsendingOrder").then((res) => {
-      setSortedDataAS(res.data);
-    });
-    axios.get("http://localhost:5001/todosDesendingOrder").then((res) => {
-      setSortedDataDS(res.data);
-    });
+    // axios.get("http://localhost:5000/todosAsendingOrder").then((res) => {
+    //   setSortedDataAS(res.data);
+    // });
+    // axios.get("http://localhost:5001/todosDesendingOrder").then((res) => {
+    //   setSortedDataDS(res.data);
+    // });
   }, []);
 
   const addTodo = () => {
@@ -27,7 +27,7 @@ function Todos() {
       alert("please enter a valid todo descripction");
     } else {
       axios
-        .post("http://localhost:5001/addTodo", {
+        .post("http://localhost:5000/addTodo", {
           desc: desc,
         })
         .then(() => {
