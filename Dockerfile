@@ -3,8 +3,9 @@ WORKDIR /app
 RUN chown -R root:$(whoami) /app
 RUN chmod -R 777 /app/
 COPY package.json .
-COPY . .
 RUN npm install
+RUN mkdir -p node_modules/.cache && chmod -R 777 node_modules/.cache
+COPY . .
 CMD ["npm", "start"]
 
 
