@@ -1,4 +1,4 @@
-FROM node:current-alpine
+FROM node
 WORKDIR /app
 RUN chown -R root:$(whoami) /app
 RUN chmod -R 777 /app/
