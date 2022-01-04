@@ -3,8 +3,8 @@ WORKDIR /app
 RUN chown -R root:$(whoami) /app
 RUN chmod -R 777 /app/
 COPY package.json .
-RUN npm install
 COPY . .
+RUN npm install
 CMD ["npm", "start"]
 
 
