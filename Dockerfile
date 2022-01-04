@@ -9,7 +9,7 @@
 # CMD ["npm", "start"]
 
 
-FROM node:14-alpine
+FROM node
 
 RUN mkdir -p /home/node/app &&\
  chown -R node:node /home/node/app
