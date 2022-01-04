@@ -11,7 +11,7 @@ function Todos() {
   const [sortedDataDS, setSortedDataDS] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/todos").then((res) => {
+    axios.get("http://mazen-back-tools-project.apps.eu45.prod.nextcle.com/todos").then((res) => {
       setTodos(res.data);
     });
     // axios.get("http://localhost:5000/todosAsendingOrder").then((res) => {
@@ -27,7 +27,7 @@ function Todos() {
       alert("please enter a valid todo descripction");
     } else {
       axios
-        .post("http://localhost:5000/addTodo", {
+        .post("http://mazen-back-tools-project.apps.eu45.prod.nextcle.com/addTodo", {
           desc: desc,
         })
         .then(() => {

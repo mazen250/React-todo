@@ -5,10 +5,10 @@ function TodoItem({ todo }) {
     const [newText, setNewText] = useState("");
 
     const deleteTodo = (id) => {
-        axios.delete(`http://localhost:5000/deleteTodo/${id}`);
+        axios.delete(`http://mazen-back-tools-project.apps.eu45.prod.nextcle.com/deleteTodo/${id}`);
     };
     const updateTodo = (id) => {
-        axios.put(`http://localhost:5000/updateTodo/${id}`, {
+        axios.put(`http://mazen-back-tools-project.apps.eu45.prod.nextcle.com/updateTodo/${id}`, {
             id: id,
             newText: newText,
         });
